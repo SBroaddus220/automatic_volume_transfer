@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "automatic-volume-transfer"
+version = "0.1.0"
+description = "Package to (automatically) detect volumes upon instantiation and copy files from the volumes to the destination directory."
+authors = ["Steven Broaddus <Steven.Broaddus220@gmail.com>"]
+license = "GPL-3.0-only"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+tqdm = "^4.66.6"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
