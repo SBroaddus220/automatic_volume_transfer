@@ -9,7 +9,7 @@ This project is also designed for files to have timestamps. A warning will be lo
 
 Please also note that this is designed for *transferring* files, meaning the originals will be deleted. Integrity checks are performed, but please change the logic if deleting the originals is not desired.
 
-For automation, this process is designed to be attached to a task scheduler program (e.g. `Task Scheduler` on Windows). The process for automation via Task Scheduler on Windows is documented within the `Installation` section.
+For automation, this process is designed to be attached to a task scheduler program (e.g. `Task Scheduler` on Windows). The process for automation via Task Scheduler on Windows is documented within the `Running the Script` section.
 
 ## Getting Starting
 
