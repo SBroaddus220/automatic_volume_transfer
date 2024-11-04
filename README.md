@@ -24,15 +24,16 @@ python3 --version  # Linux
 
 2. Poetry
 - Poetry is required for managing dependencies and running the script.
-**Installation:**
-Please refer to the official Poetry website for installation. Listed below is a past command that may work for reference.
-```bash
-curl -sSL https://install.python-poetry.org | python3 -
-```
-**Verify Installation**
-```bash
-poetry --version
-```
+    1. **Installation:**
+    Please refer to the official Poetry website for installation. Listed below is a past command that may work for reference.
+    ```bash
+    curl -sSL https://install.python-poetry.org | python3 -
+    ```
+
+    2. **Verify Installation**
+    ```bash
+    poetry --version
+    ```
 
 ### Installation
 
@@ -55,26 +56,26 @@ poetry shell
 
 4. **FFMPEG (optional):** If transferring `.wav` files, the script will automatically convert them to `.flac` files (lossless compression). 
 FFMPEG is required to be on the system's PATH.
-- [Download FFmpeg](https://ffmpeg.org/download.html) and follow the installation instructions for your operating system.
-- After installation, add FFmpeg to your system's PATH if not done so already by a installer.
-- **Windows:**
-    1. Copy the path to the FFmpeg `bin` folder (e.g., `C:\ffmpeg\bin`).
-    2. Open **System Properties > Environment Variables**
-    3. Find the **Path** variable under **System Variables** and click **Edit**
-    4. Add the FFmpeg `bin` path and click **OK** to save.
-- **Linux/MacOS:**
-    - Update your `.bashrc` or `.zshrc` file to include FFmpeg in the PATH:
+    1. [Download FFmpeg](https://ffmpeg.org/download.html) and follow the installation instructions for your operating system.
+    2. After installation, add FFmpeg to your system's PATH if not done so already by a installer.
+    - **Windows:**
+        1. Copy the path to the FFmpeg `bin` folder (e.g., `C:\ffmpeg\bin`).
+        2. Open **System Properties > Environment Variables**
+        3. Find the **Path** variable under **System Variables** and click **Edit**
+        4. Add the FFmpeg `bin` path and click **OK** to save.
+    - **Linux/MacOS:**
+        1. Update your `.bashrc` or `.zshrc` file to include FFmpeg in the PATH:
+        ```bash
+        export PATH="/path/to/ffmpeg/bin:$PATH"
+        ```
+        2. Apply the change by running:
+        ```bash
+        source ~/.bashrc  # or source ~/.zshrc
+        ```
+    3. Verify the installation by running:
     ```bash
-    export PATH="/path/to/ffmpeg/bin:$PATH"
+    ffmpeg -version
     ```
-    - Apply the change by running:
-    ```bash
-    source ~/.bashrc  # or source ~/.zshrc
-    ```
-- Verify the installation by running:
-```bash
-ffmpeg -version
-```
 
 5. Prepare configuration and environment
 Edit `VOLUMES` in `config.py` to specify desired source and destination directories to search for upon running the script.
@@ -86,7 +87,8 @@ To execute the Python script manually:
 # NOTE: Ensure Poetry shell (virtual environment) is activated
 python `automatic_volume_transfer.py`
 
-# If Poetry shell is not activated, the following command will work. Ensure you are in the project directory.
+# If Poetry shell is not activated, the following command will work. 
+# Ensure you are in the project directory.
 poetry run python automatic_volume_transfer.py 
 ```
 
